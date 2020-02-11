@@ -1,0 +1,3 @@
+certifi==2019.11.28
+PyMySQL==0.9.3
+wincertstore==0.2

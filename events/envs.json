@@ -1,0 +1,8 @@
+{
+    "DataEngineeringRDS": {
+        "RDS_HOST": "mysqlforlambdatest.cmtwbadg3isl.us-east-1.rds.amazonaws.com",
+        "DBNAME": "ExampleDB",
+        "USERNAME": "dbadmin",
+        "PASSWORD": "d0qU2M2E0D4xcJh3gsl4"
+    }
+}

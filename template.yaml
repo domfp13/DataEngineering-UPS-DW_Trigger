@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: >-
+  DataEngineering - This function inserts/reatrives data to an Aurora MySQL instance
+Resources:
+  DataEngineeringUPSDWTrigger:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      FunctionName: DataEngineering-UPSDwTrigger
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.7
+      CodeUri: .
+      Description: >-
+        UPS-DW-Trigger insert data to Aurora DB that is being posted to a s3 bucket in a regular basis.
+      MemorySize: 256
+      Timeout: 900
+      Environment:
+        Variables:
+          RDS_HOST: mysqlforlambdatest.cmtwbadg3isl.us-east-1.rds.amazonaws.com
+          DBNAME: ExampleDB
+          USERNAME: dbadmin
+          PASSWORD: d0qU2M2E0D4xcJh3gsl4
+      Role: arn:aws:iam::833695691939:role/DE-Lambda
